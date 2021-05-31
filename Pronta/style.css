@@ -1,0 +1,249 @@
+/*    RESETE */
+
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    border:0;
+    font-family: 'Spartan', sans-serif;
+    font-size: 32px;
+}
+
+/*   TOPO   */
+
+.attribution { 
+    font-size: 11px; text-align: center;
+}
+.attribution a {
+    font-size: 11px;
+    color: hsl(228, 45%, 44%);
+}
+
+/*   MENU   */
+
+p, h6 {
+    font-size: 12px;
+}
+h2 {
+    margin-right: 22%;
+}
+label {
+    background-color: var(--toggleBackground);
+    border-radius: 20px;
+    padding: 0px 5px;
+}
+.div-label {
+    width: 138px;
+    height: 38px;
+    background-color: var(--toggleBackground);
+    border-radius: 50px;
+}
+span {
+    background-color: var(--buttonEqual);
+    cursor: pointer;
+    padding: 0px 18px;
+    border-radius: 100%;
+}
+.theme {
+    margin-right: 5px;
+    margin-top: 15px;
+}
+.um-dois-tres {
+    position: absolute;
+    display: inherit;
+    width: 100px;
+    justify-content: space-between;
+    top: 8%;
+    right: 38%;
+}
+/*   TAG's  */
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+input {
+    cursor: pointer;
+    border-radius: 10px;
+}
+header{
+    color: white !important;
+}
+table{
+    border-spacing: 30px;
+}
+
+/*   BOTÕES  */
+
+.quadro-botoes {
+    background-color: var(--mainBackground);
+    width: 500px;
+    height: 465px;
+    display: flex;
+    border-radius: 10px;
+}
+.button-del, .button-reset {
+    background-color: var(--bodyBackground);
+    box-shadow: 0px 5px var(--boxShadowDelReset);
+    color: white;
+    padding: 10px 35px;
+}
+.button {
+    background-color: var(--buttonColor);
+    box-shadow: 0px 5px var(--boxShadowButton);
+    font-size: 32px;
+    padding: 10px 35px;
+    color: var(--textColor);
+}
+.button-ingual {
+    background-color: var(--buttonEqual);
+    box-shadow: 0px 5px var(--shadowEqual);
+    color: var(--textColorWithe);
+    padding: 10px 100px;
+}
+.button-del {
+    padding: 10px 15px;
+}
+.button-reset {
+    padding: 10px 59px !important;
+}
+
+/*    */
+
+header, main, .quadro-botoes, .topo {
+    justify-content: center;
+    display: flex;
+    margin-top: 40px;
+    color: var(--textColorTop);
+}
+.display {
+    background-color: var(--screenBackground);
+    color: white;
+    width: 100%;
+    height: 65px;
+    outline: none;
+    text-align: right;
+    -moz-appearance: none;
+}
+.themes {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bodyBackground);
+}
+.ativar-theme1, .ativar-theme2, .ativar-theme3{
+ display: none;
+}
+
+/*      RESPONSIVO     */
+
+@media only screen and (max-width: 600px) {
+    
+    /*   HEADER  */
+
+    .topo {
+        width: 10%;
+    }
+    h2 {
+        font-size: 70%;
+        margin-right: 100%;
+    }
+    .um-dois-tres {
+        top: 80px;
+        right: 39px;
+    }
+
+    /*    MAIN  */
+    .display {
+        height: 100px;
+    }
+    .container {
+        width: 95%;
+    }
+    .button {
+        font-size: 50%;
+        padding: 10px 27px !important;
+    }
+    .quadro-botoes{
+        width: 100%;
+        height: 90%;
+    }
+    .button-del {
+        font-size: 55%;
+        padding: 10px 20%;
+    }
+    .button-ingual, .button-reset {
+        font-size: 50%;
+        padding: 10px 47%;
+    }
+    table {
+        border-spacing: 30px;
+    }
+}
+
+/*      VARAVEIS      */
+
+:root{
+    --mainBackground: #3a4764;
+    --toggleBackground: #232c43;
+    --screenBackground: #182034;
+    --bodyBackground: #637097;
+    --boxShadowDelReset: #404e72;
+    --buttonEqual: #d03f2f;
+    --shadowEqual: #93261a;
+    --buttonColor: #eae3dc;
+    --boxShadowButton: #b4a597;
+    --textColor: #444b5a;
+    --textColorWithe: #ffffff;
+}
+
+/*    ATIVAR THEMES 1 */
+
+.ativar-theme1:checked ~ .themes {
+--mainBackground: #3a4764;
+--toggleBackground: #232c43;
+--screenBackground: #182034;
+--bodyBackground: #637097;
+--boxShadowDelReset: #404e72;
+--buttonEqual: #d03f2f;
+--shadowEqual: #93261a;
+--buttonColor: #eae3dc;
+--boxShadowButton: #b4a597;
+--textColor: #444b5a;
+--textColorWithe: #ffffff;
+--textColorTop: #ffffff;
+}
+
+
+/*    ATIVAR THEMES 2 */
+
+.ativar-theme2:checked ~ .themes {
+    --mainBackground:   #e6e6e6;
+    --toggleBackground: #d1cccc;
+    --screenBackground: #ededed;
+    --bodyBackground: #377f86;
+    --boxShadowDelReset: #1b5f65;
+    --buttonEqual: #ca5502;
+    --shadowEqual: #893901;
+    --buttonColor: #e5e4e1;
+    --boxShadowButton: #a69d91;
+    --textColor: #35352c;
+    --textColorTop: #35352c;
+}
+
+/*    ATIVAR THEMES 3 */
+
+.ativar-theme3:checked ~ .themes {
+    --mainBackground:   #160628;
+    --toggleBackground: #1d0934;
+    --screenBackground: #1d0934;
+    --bodyBackground: #58077d;
+    --boxShadowDelReset: #bc15f4;
+    --buttonEqual: #00e0d1;
+    --shadowEqual: #6cf9f2;
+    --buttonColor: #341c4f;
+    --boxShadowButton: #871c9c;
+    --textColor: #ffe53d;
+    --textColorSecundario: #1b2428;
+    --textColorTop: #ffe53d;
+}

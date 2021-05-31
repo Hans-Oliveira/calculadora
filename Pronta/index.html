@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Calculator app</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  
+<input type="radio" id="ativar-theme1" class="ativar-theme1" name="ativar">
+<input type="radio" id="ativar-theme2" class="ativar-theme2" name="ativar">
+<input type="radio" id="ativar-theme3" class="ativar-theme3" name="ativar">
+
+  <div class="themes">
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <header>
+    <div class="topo">
+      <h2>Calculadora</h2>
+      <div class="theme">
+        <p>THEME</p>
+      </div>
+      <div class="um-dois-tres">
+        <h6>1</h6>
+        <h6>2</h6>
+        <h6>3</h6>
+      </div>
+      <section class="div-label">
+        <label for="ativar-theme1">
+          <span class="slider" id="slider1"></span>
+        </label>
+        <label for="ativar-theme2">
+          <span class="slider" id="slider2"></span>
+        </label>
+        <label for="ativar-theme3">
+          <span class="slider" id="slider3"></span>
+        </label>
+      </section>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <section>
+        <form action="calcular" name="calcular">
+          <input class="display" name="display" autocomplete="off"/>
+        </form>
+      </section>
+      <section>
+        <div class="quadro-botoes">
+          <table>
+            <tr>
+              <td><input type="button" class="button" value="7" onclick="insert(value);"/></td>
+              <td><input type="button" class="button" value="8" onclick="insert(value);"/></td>
+              <td><input type="button" class="button" value="9" onclick="insert(value);"/></td>
+              <td><input type="button" class="button-del" value="DEL" onclick="del();"/></td>
+            </tr>
+            <tr>
+              <td><input type="button" class="button" value="4" onclick="insert(value);"/></td>
+              <td><input type="button" class="button" value="5" onclick="insert(value);"/></td>
+              <td><input type="button" class="button" value="6" onclick="insert(value);"/></td>
+              <td><input type="button" class="button" value="+" onclick="insert('+');" style="padding: 10px 38px;"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="button" value="1" onclick="insert(value);" style="padding: 10px 40px;"/></td>
+                <td><input type="button" class="button" value="2" onclick="insert(value);"/></td>
+                <td><input type="button" class="button" value="3" onclick="insert(value);"/></td>
+                <td><input type="button" class="button" value="-" onclick="insert('-');"style="padding: 10px 40px;"/></td>
+            </tr>
+            <tr>
+              <td><input type="button" class="button" value="." onclick="insert('.');" style="padding: 10px 40px;"/></td>
+              <td><input type="button" class="button" value="0" onclick="insert(value);"/></td>
+              <td><input type="button" class="button" value="/" onclick="insert('/');" style="padding: 10px 38px;"/></td>
+              <td><input type="button" class="button" value="X" onclick="insert('*');"/></td>
+            </tr>
+            <tr> 
+              <td colspan="2"><input type="button" class="button-reset" value="RESET" onclick="reset();"/></td>
+              <td colspan="2"><input type="button" class="button-ingual" value="=" onclick="equal();"/></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
